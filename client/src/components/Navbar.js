@@ -45,15 +45,7 @@ const Menu = ({ history }) => (
                </Fragment>
            )}
 
-            <li className="nav-item">
-                <Link
-                    className="nav-link"
-                    style={isActive(history, "/shop")}
-                    to="/shop"
-                >
-                    Medicines
-                </Link>
-            </li>
+           
 
          
 
