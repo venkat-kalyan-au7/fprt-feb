@@ -4,12 +4,12 @@
 
 **USER CREDENTIALS**
 	email:fprtfeb@gmail.com
-	password:15MEKa@&
+	password:15MEka@&
 	
 	
 	
 	--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 **ADMIN CREDENTIALS**
 	email:fprtfebadmin@gmail.com
-	password:15MEKa@&
+	password:15MEka@&
 
