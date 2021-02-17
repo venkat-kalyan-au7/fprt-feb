@@ -5,9 +5,7 @@ import Category from "../models/categoryModel"
 import Product from "../models/productModel"
 import errors from "../errors/dataBaseErrors"
 
-//localhost:4000/api/category/create/5f4659805ab97402107fb25c
 
-///api/category/create/5f4cd109b5d5fa25288a08f6
 
 //creating new category
 exports.addNewCategory =(req,res)=>{
@@ -159,12 +157,7 @@ exports.updateProduct = (req, res) => {
 };
 
 
-/**
- * sold / newly added
- * by sold = /products?sortBy=sold&order=desc&limit=4
- * by newly added = /products?sortBy=createdAt&order=desc&limit=4
- * if no params are sent, then all products are returned
- */ 
+
 exports.allMedicines=(req,res)=>{
     let order = req.query.order ? req.query.order : "asc";
     let sortBy = req.query.sortBy ? req.query.sortBy : "_id";//we can sort the data or default it will show by id
@@ -189,21 +182,7 @@ exports.allMedicines=(req,res)=>{
  * first we will request the single item by id and remaining related items are obtained from
  * category of current item (excluding the current)
  */
-exports.relatedMed =(req,res)=>{
-    let limit = req.query.limit ? parseInt(req.query.limit) : 6;
 
-    Product.find({ _id: { $ne: req.product }, category: req.product.category })
-        .limit(limit)
-        .populate("category", "_id name")
-        .exec((err, products) => {
-            if (err) {
-                return res.status(400).json({
-                    error: "Medicines not found"
-                });
-            }
-            res.json(products);
-        });
-}
 
 //this will give all the categories from the products which we are selling
 exports.allProductCategories=(req,res)=>{

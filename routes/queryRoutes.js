@@ -5,7 +5,6 @@ import {viewCategory,
         allCategories,
         viewProduct,
         allMedicines,
-        relatedMed,
         allProductCategories,
         showBySearch,
         imageOfProduct,
@@ -24,7 +23,6 @@ router.get('/categories',allCategories)
 
 router.get('/product/:productId',viewProduct)
 router.get('/products',allMedicines)
-router.get('/products/related/:productId',relatedMed)
 router.get('/products/categories',allProductCategories)
 router.get('/product/photo/:productId',imageOfProduct)
 //we are using request body in this so i created it as post method 
